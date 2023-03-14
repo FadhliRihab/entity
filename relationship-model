@@ -1,0 +1,23 @@
+        +-------------------+                 +----------------+
+        |    Gymnasium      |                 |     Session    |
+        +-------------------+                 +----------------+
+        | id: int (PK)      |                 | id: int (PK)   |
+        | name: varchar     |                 | sport: varchar |
+        | address: varchar  |                 | schedule: time |
+        | phone: varchar    |                 | max_capacity: int |
+        +-------------------+                 | gymnasium_id: int (FK)|
+                                             +----------------+
+                                                         |
+                                                         |
+        +------------------+                 +---------------+
+        |      Member      |                 |     Coach     |
+        +------------------+                 +---------------+
+        | id: int (PK)     |                 | id: int (PK)  |
+        | last_name: varchar|                 | first_name: varchar |
+        | first_name: varchar |               | last_name: varchar |
+        | address: varchar |                 | age: int |
+        | dob: date        |                 | specialty: varchar |
+        | gender: varchar  |                 +---------------+
+        | gymnasium_id: int (FK)|              | gymnasium_id: int (FK)|
+        +------------------+                 +---------------+
+        
